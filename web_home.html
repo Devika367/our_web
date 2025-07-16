@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gopika</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Georgia', serif;
+      color: #222;
+      position: relative;
+    }
+
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url('img1.jpg'); /* background for whole page */
+      background-size: cover;
+      background-position: center;
+      filter: blur(15px);
+      z-index: -1;
+    }
+
+    .collage-container {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(2px);
+    }
+
+    .left-column {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .left-column img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      max-height: 40%;
+    }
+
+    .text-content {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .text-content h3 {
+      font-size: 22px;
+      font-style: italic;
+      color: #555;
+    }
+
+    .text-content h1 {
+      font-size: 42px;
+      font-weight: bold;
+      color: #111;
+      margin: 8px 0;
+    }
+
+    .text-content p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .right-column {
+      flex: 1.5;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-overlay {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .main-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+    }
+
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 20px 30px;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .tagline {
+      font-size: 18px;
+      color: #222;
+      font-style: italic;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .options a {
+      display: inline-block;
+      margin: 8px 10px;
+      padding: 10px 20px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 15px;
+      color: #111;
+      background-color: rgba(255,255,255,0.8);
+      transition: all 0.3s ease;
+    }
+
+    .options a:hover {
+      background-color: #111;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .collage-container {
+        flex-direction: column;
+      }
+
+      .left-column, .right-column {
+        padding: 20px;
+      }
+
+      .text-content h1 {
+        font-size: 32px;
+      }
+
+      .left-column img {
+        max-height: 25%;
+      }
+
+      .overlay-content {
+        width: 90%;
+        padding: 15px;
+      }
+
+      .main-image {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .options a {
+        margin: 6px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Image -->
+  <div class="background-image"></div>
+
+  <!-- Main Content -->
+  <section class="collage-container">
+    <div class="left-column">
+      <img src="img2ear.jpg" alt="Earrings" />
+      <div class="text-content">
+        <h3>New</h3>
+        <h1>Essentials</h1>
+        <p>Bringing to you more styles you will fall in love with.</p>
+      </div>
+      <img src="img3brac.jpg" alt="Bracelet" />
+    </div>
+
+    <div class="right-column">
+      <div class="image-overlay">
+        <img src="img4bg.jpg" alt="Model wearing jewelry" class="main-image" />
+        <div class="overlay-content">
+          <div class="tagline">Style that speaks for you. Shine effortlessly.</div>
+          <div class="options">
+            <a href="sign_in.html">Sign In</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
